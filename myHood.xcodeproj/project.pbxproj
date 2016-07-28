@@ -12,6 +12,10 @@
 		185F40541D48866500525892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F40521D48866500525892 /* Main.storyboard */; };
 		185F40561D48866500525892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185F40551D48866500525892 /* Assets.xcassets */; };
 		185F40591D48866500525892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185F40571D48866500525892 /* LaunchScreen.storyboard */; };
+		185F40641D4886F400525892 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F40631D4886F400525892 /* Post.swift */; };
+		185F40661D4891FD00525892 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185F40651D4891FD00525892 /* PostCell.swift */; };
+		189A0B021D49C92B00BA1275 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A0B011D49C92B00BA1275 /* AddPostVC.swift */; };
+		189A0B051D49D2FE00BA1275 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A0B041D49D2FE00BA1275 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		185F40551D48866500525892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185F40581D48866500525892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185F405A1D48866500525892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185F40631D4886F400525892 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		185F40651D4891FD00525892 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		189A0B011D49C92B00BA1275 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		189A0B041D49D2FE00BA1275 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		185F404D1D48866500525892 /* myHood */ = {
 			isa = PBXGroup;
 			children = (
+				189A0B031D49D2F300BA1275 /* Services */,
+				185F40621D4886CB00525892 /* View */,
+				185F40611D4886C400525892 /* Controller */,
+				185F40601D4886BE00525892 /* Model */,
 				185F404E1D48866500525892 /* AppDelegate.swift */,
-				185F40501D48866500525892 /* ViewController.swift */,
-				185F40521D48866500525892 /* Main.storyboard */,
 				185F40551D48866500525892 /* Assets.xcassets */,
-				185F40571D48866500525892 /* LaunchScreen.storyboard */,
 				185F405A1D48866500525892 /* Info.plist */,
 			);
 			path = myHood;
+			sourceTree = "<group>";
+		};
+		185F40601D4886BE00525892 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				185F40631D4886F400525892 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		185F40611D4886C400525892 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				185F40501D48866500525892 /* ViewController.swift */,
+				189A0B011D49C92B00BA1275 /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		185F40621D4886CB00525892 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				185F40521D48866500525892 /* Main.storyboard */,
+				185F40571D48866500525892 /* LaunchScreen.storyboard */,
+				185F40651D4891FD00525892 /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		189A0B031D49D2F300BA1275 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				189A0B041D49D2FE00BA1275 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +140,7 @@
 				TargetAttributes = {
 					185F404A1D48866500525892 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 253ET55U8L;
 					};
 				};
 			};
@@ -135,8 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185F40641D4886F400525892 /* Post.swift in Sources */,
 				185F40511D48866500525892 /* ViewController.swift in Sources */,
+				189A0B021D49C92B00BA1275 /* AddPostVC.swift in Sources */,
+				189A0B051D49D2FE00BA1275 /* DataService.swift in Sources */,
 				185F404F1D48866500525892 /* AppDelegate.swift in Sources */,
+				185F40661D4891FD00525892 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = myHood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SimpleStuff.myHood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +314,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = myHood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SimpleStuff.myHood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -288,6 +343,7 @@
 				185F405F1D48866500525892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
